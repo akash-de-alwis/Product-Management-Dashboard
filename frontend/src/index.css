@@ -1,0 +1,89 @@
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;  /* Changed to more subtle rounded corners */
+    border: none;  /* Removed border for a cleaner look */
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .button-info {
+    background-color: #3B5998; /* Royal Blue */
+    color: white;
+  }
+  
+  .button-info:hover {
+    background-color: #2a4578; /* Slightly darker Royal Blue */
+  }
+  
+  .button-success {
+    background-color: #50C878; /* Emerald Green */
+    color: white;
+  }
+  
+  .button-success:hover {
+    background-color: #45a15c; /* Slightly darker Emerald Green */
+  }
+  
+  .button-danger {
+    background-color: #DC143C; /* Crimson */
+    color: white;
+  }
+  
+  .button-danger:hover {
+    background-color: #b91c33; /* Slightly darker Crimson */
+  }
+  
+  .button-primary {
+    background-color: #3B5998; /* Royal Blue */
+    color: white;
+  }
+  
+  .button-primary:hover {
+    background-color: #2a4578; /* Slightly darker Royal Blue */
+  }
+  
+  /* Product List Styles */
+  .list-group {
+    margin-top: 2rem;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-info {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  @media (max-width: 768px) {
+    .list-group-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

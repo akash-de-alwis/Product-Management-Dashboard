@@ -1,0 +1,205 @@
+/* Global Styles */
+:root {
+  --primary-color: #3B5998;  /* Royal Blue */
+  --secondary-color: #2F4F4F;  /* Dark Slate */
+  --accent-color: #50C878;  /* Emerald Green */
+  --error-color: #DC143C;  /* Crimson */
+  --bg-color: #f8f9fa;
+  --card-bg: #fff;
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --btn-hover-bg: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  background-image: url('E:/assignment/product-management-dashboard/frontend/src/assets/img1.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  min-height: 100vh; /* Makes sure the background covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white; /* Set text color to white for contrast against the background */
+  position: relative;
+}
+
+/* Semi-transparent overlay for readability */
+.dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 0;
+}
+
+.dashboard-header,
+.dashboard-stats,
+.dashboard-actions {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Styling */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.dashboard-subtext {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  margin-top: 1rem;
+}
+
+/* Stats Section */
+.dashboard-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4e79c7, #2a4b7c); /* Gradient background for the card */
+  color: #fff;
+  border-radius: 10px;  /* Rounded corners */
+  padding: 2rem;
+  width: 320px;  /* Rectangular width */
+  height: 200px;  /* Set height to make the card rectangular */
+  margin: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+.stat-card .stat-icon {
+  font-size: 40px;  /* Icon size */
+  margin-bottom: 1.5rem;
+}
+
+.stat-card .stat-info {
+  text-align: center;
+}
+
+.stat-card .stat-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stat-card .stat-info p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #f1f1f1; /* Lighter text color */
+}
+
+/* Button Styling */
+.action-button {
+  padding: 1rem 2.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: var(--hover-color);  /* Darker Royal Blue on hover */
+  transform: translateY(-3px);  /* Slight lift effect */
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .stat-card {
+    width: 90%;  /* Adjust the width for smaller screens */
+    margin: 10px 0;
+  }
+
+  .action-button {
+    width: 100%;  /* Full width for mobile */
+  }
+}
+
+/* Action Buttons */
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:hover {
+  background-color: #2a4578;  /* Darker Royal Blue on hover */
+  transform: translateY(-4px);  /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stat-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .action-button {
+    width: 100%;
+    text-align: center;
+  }
+}
