@@ -49,7 +49,7 @@ A web application built with React and Node.js for managing products. It allows 
    - Frontend:
      ```bash
      cd frontend
-     npm start
+     npm run dev
      ```
 
 4. Open the app in your browser:
